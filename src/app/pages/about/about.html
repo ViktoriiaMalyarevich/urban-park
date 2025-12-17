@@ -1,0 +1,45 @@
+<div class="relative bg-gray-900 min-h-screen text-white font-sans">
+
+  <section class="flex flex-col items-center justify-center text-center py-20 px-6 bg-black/40">
+    <h1 class="text-5xl font-bold mb-4">{{ mockData.aboutData()?.title }}</h1>
+    <p class="text-lg text-gray-300 max-w-2xl">
+      {{ mockData.aboutData()?.subtitle }}
+    </p>
+    <button (click)="openParkHistoryDialog()"
+            class="mt-6 bg-indigo-500 hover:bg-indigo-400 text-white px-6 py-3 rounded-lg transition">
+      {{ mockData.aboutData()?.button }}
+    </button>
+  </section>
+
+  <section class="max-w-4xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-semibold text-center mb-12">{{ mockData.aboutData()?.transformationSection?.title }}</h2>
+    <div class="space-y-8">
+      @for (feature of mockData.aboutData()?.transformationSection?.stages; track feature.id) {
+        <div class="border-l-4 border-indigo-500 pl-6">
+          <h3 class="text-xl font-bold">{{ feature.title }}</h3>
+          <p class="text-gray-400">{{ feature.description }}</p>
+        </div>
+      }
+    </div>
+  </section>
+
+  <section class="bg-gray-800 pt-16 px-6">
+    <h2
+      class="text-3xl font-semibold text-center mb-12">{{ mockData.aboutData()?.sectionArchitecturalElements?.title }}</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+      @for (feature of mockData.aboutData()?.sectionArchitecturalElements?.stages; track feature.id) {
+        <div class="bg-gray-700 p-6 rounded-lg shadow transition">
+          <img [src]="feature.icon" class="mx-auto mb-4"/>
+          <h3 class="text-xl font-semibold mb-2">{{ feature.title }}</h3>
+          <p class="text-gray-400 text-sm">{{ feature.description }}</p>
+        </div>
+      }
+    </div>
+    <footer class="text-white py-12 text-center">
+      <p class="italic">{{ mockData.aboutData()?.footer?.quote }}</p>
+      <br>
+      <p class="italic">{{ mockData.aboutData()?.footer?.year }}</p>
+    </footer>
+  </section>
+
+</div>

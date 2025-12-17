@@ -1,0 +1,44 @@
+<div class="relative bg-gray-900 min-h-screen text-white font-sans">
+  <section class="px-6 pt-20 h-lvh lg:px-8 flex justify-between">
+    <div class="map relative inline-bloc max-w-[850px] m-auto">
+      <img class="w max-h-lvh block scale-110" [src]="'map.png' | imagePath" alt="Map"/>
+
+      @for (zone of zones(); track zone.id) {
+        <a
+          class="absolute -translate-x-1/2 -translate-y-1/2 outline-1 outline-indigo-300 border-10 border-indigo-50 rounded-xl hover:rounded cursor-pointer scale-30 hover:scale-100 hover:outline-0 hover:border-4"
+          [style.right.%]="zone.x"
+          [style.top.%]="zone.y"
+          (click)="openDialog(dialogTemplate)"
+        >
+          <div class="relative w-[120px] h-[70px] group">
+            <img
+              class="w-full h-full object-cover group-hover:brightness-30 transition-all duration-300"
+              [src]="zone.image | imagePath"
+            />
+            <span
+              class="absolute inset-0 flex justify-center items-center text-white text-center text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              [innerHTML]="zone.name"
+            ></span>
+          </div>
+        </a>
+
+        <ng-template #dialogTemplate>
+          <div class="flex flex-row-reverse justify-between">
+            <button class="h-[2rem] w-[2rem] mr-5 mt-5 text-gray-400 border-0 outline-0 focus:outline-none focus:border-0 active:border-0 hover:bg-indigo-100 rounded-full" mat-dialog-close>
+              X
+            </button>
+          </div>
+          <mat-dialog-content class="flex">
+            <img class="w-full h-auto block pt-1 rounded" [src]="zone.image | imagePath"
+                 [alt]="zone.name"/>
+            <div class="flex flex-col">
+              <h2 class="text-2xl mx-auto py-2" [innerHTML]="zone.name"></h2>
+              <p class="mx-auto text-center" [innerHTML]="zone.description"></p>
+            </div>
+          </mat-dialog-content>
+        </ng-template>
+      }
+
+    </div>
+  </section>
+</div>

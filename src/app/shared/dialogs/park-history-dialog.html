@@ -1,0 +1,33 @@
+
+<div mat-dialog-title>
+  <h1 class="text-3xl font-medium  text-neutral-700">{{ data.title }}</h1>
+</div>
+<mat-dialog-content class="mat-typography text-gray-300" >
+  @for(section of data.sections; track $index) {
+
+    @if(section.paragraph) {
+      <p class="text-neutral-700" [innerHTML]="section.paragraph"></p>
+    }
+
+    @if(section.heading) {
+      <h2 class="text-lg font-medium text-neutral-700 pt-6 pb-2" [innerHTML]="section.heading"></h2>
+    }
+
+    @if(section.list?.length) {
+      <ul class="list-disc list-inside text-neutral-700">
+        @for(item of section.list; track $index) {
+          <li [innerHTML]="item"></li>
+        }
+      </ul>
+    }
+
+  }
+</mat-dialog-content>
+
+<mat-dialog-actions align="center" class="flex gap-x-4 mt-6">
+  <a [mat-dialog-close]="true" cdkFocusInitial
+     class="rounded-md bg-indigo-500 px-6 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+    OK
+  </a>
+</mat-dialog-actions>
+

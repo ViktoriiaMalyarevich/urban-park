@@ -1,0 +1,19 @@
+<h2 mat-dialog-title class="text-white" [innerHTML]="data.title"></h2>
+
+<mat-dialog-content class="mat-typography text-gray-300 h-140" >
+  <h3 class="mb-4" [innerHTML]="data.description"></h3>
+  <div class="flex flex-wrap justify-center gap-4 pt-1"
+       [ngClass]="data.images.length <= 4 ? 'gap-4 lg:max-w-[80rem]' : 'gap-3 lg:max-w-[65rem]'"
+  >
+    @for(image of data.images; track $index) {
+      <img [src]="image | imagePath" alt="Фото 1" class="rounded shadow-md  transition h-[55vh]" />
+    }
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="center" class="flex gap-x-4 mt-6">
+  <a [mat-dialog-close]="true" cdkFocusInitial
+     class="rounded-md bg-indigo-500 px-6 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+    OK
+  </a>
+</mat-dialog-actions>
