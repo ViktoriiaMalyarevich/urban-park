@@ -1,0 +1,67 @@
+{
+  "backgroundHomePageUrl": "bgbp.png",
+  "heroSection": {
+    "title": "Urban Park",
+    "subtitle": "Місце, де природа зустрічається з містом",
+    "oldButtonText": "Поточний стан території →",
+    "regButtonText": "Регенерація"
+  },
+  "projectIdeaSection": {
+    "title": "Проєктно-концептуальна ідея",
+    "description": "Вітаємо вас на сайті-візитці Парку Майбутнього! Проєкт передбачає створення нового сучасного парку для всіх мешканців міста, поділеного на функціональні зони. У його складі — двоповерховий центр розваг із виходом на дах, звідки відкривається захоплива панорама парку."
+  },
+  "parkFeaturesSection": {
+    "title": "Що передбачає проєкт",
+    "features": [
+      {
+        "id": "1",
+        "title": "Зелена зона",
+        "description": "Прогулянки серед дерев і квітів",
+        "icon": "https://img.icons8.com/ios-filled/50/FFFFFF/deciduous-tree.png"
+      },
+      {
+        "id": "2",
+        "title": "Спорт",
+        "description": "Майданчики для активного відпочинку",
+        "icon": "https://img.icons8.com/ios-filled/50/ffffff/basketball.png"
+      },
+      {
+        "id": "3",
+        "title": "Події",
+        "description": "Концерти, фестивалі, виставки",
+        "icon": "https://img.icons8.com/ios-filled/50/ffffff/concert.png"
+      },
+      {
+        "id": "4",
+        "title": "Парковка",
+        "description": "Зручний доступ для всіх",
+        "icon": "https://img.icons8.com/ios-filled/50/ffffff/parking.png"
+      }
+    ]
+  },
+  "DataHomePagePhotosDialog": {
+    "oldPhoto": {
+      "title": "Поточний стан території",
+      "description": "Тут ви бачите, яким був парк до реконструкції — занедбана територія з пошкодженими доріжками та застарілою інфраструктурою.",
+      "images": [
+        "old_photo_0001.png",
+        "old_photo_0002.png",
+        "old_photo_0003.png",
+        "old_photo_0004.png"
+      ]
+    },
+    "regPhoto": {
+      "title": "Регенерація",
+      "description": "Фото демонструють оновлений парк після регенерації: сучасні простори, озеленення та нову інфраструктуру.",
+      "images": [
+        "reg_photo_0001.png",
+        "reg_photo_0002.png",
+        "reg_photo_0003.png",
+        "reg_photo_0004.png",
+        "reg_photo_0005.png",
+        "reg_photo_0006.png"
+      ]
+    }
+  },
+  "footerText": "© 2025 Urban Park. Всі права захищено."
+}
