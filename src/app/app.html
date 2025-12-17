@@ -1,9 +1,9 @@
 <header class="absolute inset-x-0 top-0 z-[999]">
   <nav class="flex items-center justify-between p-6 lg:px-8">
     <div class="hidden lg:flex lg:gap-x-12 mx-auto">
-      <a href="/" class="text-sm font-semibold text-white">Home</a>
-      <a href="/map" class="text-sm font-semibold text-white">MAP</a>
-      <a href="/about" class="text-sm font-semibold text-white">About</a>
+      <a [routerLink]="['/']" class="text-sm font-semibold text-white">Home</a>
+      <a [routerLink]="['/map']" class="text-sm font-semibold text-white">MAP</a>
+      <a [routerLink]="['/about']" class="text-sm font-semibold text-white">About</a>
     </div>
   </nav>
 </header>
